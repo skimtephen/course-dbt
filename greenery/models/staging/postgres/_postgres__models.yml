@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: stg_addresses
+    description: Table of addresses, states, cities and zips
+    columns:
+      - name: address_id
+      - name: address
+      - name: zipcode
+      - name: state
+      - name: country
+  - name: stg_events
+    description: Table of website events for each user
+    columns:
+      - name: event_id
+      - name: session_id
+      - name: user_id
+      - name: page_url
+      - name: created_at
+      - name: event_type
+      - name: order_id
+      - name: product_id
+  - name: stg_orders
+    description: Table of orders, costs and delivery estimates
+    columns:
+      - name: order_id
+      - name: user_id
+      - name: promo_id
+      - name: address_id
+      - name: created_id
+      - name: order_cost
+      - name: shipping_cost
+      - name: order_total
+      - name: tracking_id
+      - name: shipping_service
+  - name: stg_order_items
+    description: Table of products in each order
+    columns:
+      - name: order_id
+      - name: product_id
+      - name: quantity
+  - name: stg_products
+    description: Table of products and inventory levels
+    columns:
+      - name: product_id
+      - name: name
+      - name: price
+      - name: inventory
+  - name: stg_promos
+    description: Table of promotions
+    columns:
+      - name: promo_id
+      - name: discount
+      - name: status
+  - name: stg_users
+    description: Table of users
+    columns:
+      - name: user_id
+      - name: first_name
+      - name: last_name
+      - name: email
+      - name: phone_number
+      - name: created_at
+      - name: updated_at
+      - name: address_id
+      
