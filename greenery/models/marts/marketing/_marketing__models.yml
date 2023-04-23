@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fact_user_orders
+    description: ''
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+      - name: num_orders
+        tests:
+          - not_null
+          - positive_values
+      - name: order_purchase_total_dollars
+        tests:
+          - not_null
+          - positive_values
+      - name: first_order_date
+        tests:
+          - not_null
+      - name: lastest_order_date
+        tests:
+          - not_null
